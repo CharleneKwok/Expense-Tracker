@@ -1,0 +1,77 @@
+.new-form {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 5px;
+  padding: 15px;
+}
+
+.new-form label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.new-form input {
+  border-radius: 5px;
+  border: white;
+  height: 2rem;
+  padding: 10px;
+  font-family: inherit;
+}
+
+.new-form__button {
+  width: 150px;
+  padding: 10px;
+  color: white;
+  background-color: #330050;
+  border: #330050;
+  font-family: inherit;
+  border-radius: 13px;
+  margin: 20px 10px 0 0;
+  justify-self: end;
+}
+
+.new-form__button:hover,
+.new-form__button:active {
+  background-color: white;
+  color: #330050;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 40rem) {
+  .new-form {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title amount"
+      "date ."
+      ". button";
+    gap: 20px;
+  }
+
+  .new-form__title,
+  .new-form__title + input {
+    grid-area: title;
+  }
+
+  .new-form__amount,
+  .new-form__amount + input {
+    grid-area: amount;
+  }
+
+  input {
+    align-self: end;
+  }
+
+  .new-form__date,
+  .new-form__date + input {
+    grid-area: date;
+  }
+
+  .new-form__button {
+    grid-area: button;
+    padding: 15px;
+    transform: translateY(-5px);
+  }
+}

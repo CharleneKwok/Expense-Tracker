@@ -1,0 +1,15 @@
+.expenses-filter {
+  font-family: inherit;
+  margin: 30px;
+}
+
+.expenses-filter__control {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.expenses-filter__control select {
+  padding: 5px;
+  border-radius: 10px;
+}

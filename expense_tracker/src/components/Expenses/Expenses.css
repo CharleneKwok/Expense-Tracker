@@ -1,0 +1,10 @@
+.expense {
+  background-color: #1d1d1d;
+  width: 100%;
+}
+
+@media (min-width: 53rem) {
+  .expense {
+    width: 60%;
+  }
+}

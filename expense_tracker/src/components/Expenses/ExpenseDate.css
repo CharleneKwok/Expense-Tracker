@@ -1,0 +1,54 @@
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: white 1px solid;
+  border-radius: 20px;
+  background-color: #252525;
+  padding: 10px;
+  margin: 10px auto;
+  width: 100%;
+}
+
+.date__large {
+  display: none;
+}
+
+.date__mobile {
+  font-weight: bold;
+}
+
+@media (min-width: 40rem) {
+  .date__mobile {
+    display: none;
+  }
+
+  .date {
+    flex-direction: column;
+    text-align: center;
+    border: white 1px solid;
+    border-radius: 20px;
+    background-color: #252525;
+    padding: 10px;
+    margin: 10px auto;
+    min-width: 90px;
+    max-width: 124px;
+  }
+
+  .date__large {
+    display: block;
+  }
+
+  .date__month {
+    font-weight: bold;
+  }
+
+  .date__year {
+    font-size: 0.8rem;
+  }
+
+  .date__day {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+}

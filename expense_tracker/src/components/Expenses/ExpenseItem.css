@@ -1,0 +1,73 @@
+.expense-item {
+  background-color: #424242;
+  color: white;
+  margin: 20px 25px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "date date"
+    "name price";
+  align-items: center;
+  padding: 5px;
+}
+
+.expense-item__date {
+  grid-area: date;
+}
+
+.expense-item__name {
+  grid-area: name;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0 20px;
+}
+
+.expense-item__price {
+  border: 1px white solid;
+  border-radius: 10px;
+  background-color: #330050;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  width: 100px;
+  height: auto;
+  grid-area: price;
+  /* word-wrap: break-word; */
+  justify-self: end;
+  margin: 10px;
+}
+
+.expense-item:hover,
+.expense-item:active {
+  animation: moveUp 500ms ease-out;
+}
+
+@media (min-width: 40rem) {
+  .expense-item {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "date name price";
+  }
+
+  .expense-item__name {
+    margin-left: 10px;
+    font-size: 1.3rem;
+  }
+
+  .expense-item__price {
+    width: 150px;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
