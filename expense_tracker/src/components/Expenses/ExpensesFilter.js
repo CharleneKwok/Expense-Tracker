@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ExpensesFilter.css";
 
 const ExpensesFilter = (props) => {
@@ -19,7 +19,11 @@ const ExpensesFilter = (props) => {
     <div className="expenses-filter">
       <div className="expenses-filter__control">
         <label for="selectYear">Filter by year</label>
-        <select id="selectYear" onChange={selectedYearChange}>
+        <select
+          id="selectYear"
+          onChange={selectedYearChange}
+          value={props.selected}
+        >
           {years?.map((year, i) => (
             <option value={year} key={i}>
               {year}

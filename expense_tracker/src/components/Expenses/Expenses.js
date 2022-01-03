@@ -14,7 +14,7 @@ const Expenses = ({ items }) => {
 
   return (
     <Card className="expense">
-      <ExpensesFilter value={selectedYear} filterChange={filterChange} />
+      <ExpensesFilter selected={selectedYear} filterChange={filterChange} />
       {items?.map((item, i) => (
         <ExpenseItem item={item} key={i} />
       ))}
