@@ -9,8 +9,6 @@ const ExpensesFilter = (props) => {
     years.push(i);
   }
 
-  console.log(years);
-
   const selectedYearChange = (event) => {
     props.filterChange(event.target.value);
   };
@@ -24,8 +22,8 @@ const ExpensesFilter = (props) => {
           onChange={selectedYearChange}
           value={props.selected}
         >
-          {years?.map((year, i) => (
-            <option value={year} key={i}>
+          {years?.map((year) => (
+            <option value={year} key={year}>
               {year}
             </option>
           ))}

@@ -1,8 +1,9 @@
 .new-form {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  row-gap: 5px;
+  grid-template-rows: 1fr 1fr 1fr [row4] 1fr [end];
+  row-gap: 10px;
   padding: 15px;
+  width: auto;
 }
 
 .new-form label {
@@ -17,6 +18,8 @@
   height: 2rem;
   padding: 10px;
   font-family: inherit;
+  width: auto;
+  min-width: 100px;
 }
 
 .new-form__button {
@@ -28,7 +31,8 @@
   font-family: inherit;
   border-radius: 13px;
   margin: 20px 10px 0 0;
-  justify-self: end;
+  /* justify-self: end; */
+  /* grid-row: 8/9; */
 }
 
 .new-form__button:hover,
@@ -37,6 +41,7 @@
   color: #330050;
   cursor: pointer;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 
 @media (min-width: 40rem) {
@@ -70,8 +75,18 @@
   }
 
   .new-form__button {
-    grid-area: button;
     padding: 15px;
     transform: translateY(-5px);
+    width: auto;
+  }
+
+  .new-form__allbuttons {
+    grid-area: button;
+    justify-self: end;
+  }
+
+  .new-form__button:hover,
+  .new-form__button:active {
+    margin: 20px 5px 0 0;
   }
 }

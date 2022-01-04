@@ -3,7 +3,7 @@
   color: white;
   margin: 20px 25px;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 70px 1fr;
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
     "date date"
@@ -14,6 +14,7 @@
 
 .expense-item__date {
   grid-area: date;
+  align-self: start;
 }
 
 .expense-item__name {
@@ -33,14 +34,14 @@
   width: 100px;
   height: auto;
   grid-area: price;
-  /* word-wrap: break-word; */
+  word-wrap: break-word;
   justify-self: end;
   margin: 10px;
 }
 
 .expense-item:hover,
 .expense-item:active {
-  animation: moveUp 500ms ease-out;
+  animation: moveUp 1.5s ease-in;
 }
 
 @media (min-width: 40rem) {
@@ -57,6 +58,10 @@
 
   .expense-item__price {
     width: 150px;
+  }
+
+  .expense-item__date {
+    align-self: center;
   }
 }
 

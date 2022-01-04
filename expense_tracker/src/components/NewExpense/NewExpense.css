@@ -4,6 +4,27 @@
   margin: 30px 0;
 }
 
+.new-expense__open {
+  margin: 20px auto;
+  display: flex;
+  padding: 15px;
+  background-color: #330050;
+  border: #330050;
+  font-family: inherit;
+  border-radius: 13px;
+  color: white;
+  text-align: center;
+}
+
+.new-expense__open:hover,
+.new-expense__open:active {
+  background-color: white;
+  color: #330050;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
 @media (min-width: 53rem) {
   .new-expense {
     width: 60%;

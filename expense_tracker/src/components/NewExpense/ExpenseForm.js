@@ -66,9 +66,14 @@ const ExpenseForm = (props) => {
         onChange={(e) => setDate(e.target.value)}
         value={date}
       />
-      <button className="new-form__button" type="submit">
-        Add Expense
-      </button>
+      <div className="new-form__allbuttons">
+        <button className="new-form__button" onClick={props.cancelHandler}>
+          Cancel
+        </button>
+        <button className="new-form__button" type="submit">
+          Add Expense
+        </button>
+      </div>
     </form>
   );
 };

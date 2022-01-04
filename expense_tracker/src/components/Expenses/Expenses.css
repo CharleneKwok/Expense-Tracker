@@ -3,6 +3,11 @@
   width: 100%;
 }
 
+.expense__noExpense {
+  color: white;
+  text-align: center;
+}
+
 @media (min-width: 53rem) {
   .expense {
     width: 60%;
