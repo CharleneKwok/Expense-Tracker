@@ -4,6 +4,7 @@
   row-gap: 10px;
   padding: 15px;
   width: auto;
+  transition: all 500ms ease-in;
 }
 
 .new-form label {
@@ -42,6 +43,50 @@
   cursor: pointer;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
   font-weight: bold;
+}
+
+.new-form__backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.new-form__invalid {
+  position: fixed;
+  background-color: #3f3f3f;
+  color: white;
+  border-radius: 30px;
+  z-index: 101;
+  left: 0;
+  right: 0;
+  margin: 20vh auto;
+  max-width: 470px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-form__invalid p {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.new-form__invalid-close {
+  font-family: inherit;
+  border-radius: 10px;
+  background-color: #3f3f3f;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+  justify-self: flex-start;
+  padding: 5px;
+  margin: 20px;
 }
 
 @media (min-width: 40rem) {

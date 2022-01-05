@@ -20,12 +20,13 @@ const NewExpense = (props) => {
 
   return (
     <Card className="new-expense">
-      {open ? (
+      {open && (
         <ExpenseForm
           onAddExpense={onAddExpense}
           cancelHandler={cancelHandler}
         />
-      ) : (
+      )}
+      {!open && (
         <button
           className="new-expense__open"
           onClick={() => {
