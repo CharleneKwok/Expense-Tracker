@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = (props) => {
+  // const titleInput = useRef(null);
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
@@ -26,6 +27,7 @@ const ExpenseForm = (props) => {
     event.preventDefault();
     if (title.trim().length === 0 || amount <= 0 || !date) {
       if (title.trim().length === 0) {
+        // titleInput.current.focus();
         setErrorMsg("Please enter the title of expense :)");
       } else if (amount <= 0) {
         setErrorMsg("Please enter valid amount :)");
@@ -70,16 +72,17 @@ const ExpenseForm = (props) => {
         </div>
       )}
       <form className="new-form" onSubmit={submitForm}>
-        <label for="title" className="new-form__title">
+        <label htmlFor="title" className="new-form__title">
           Title
         </label>
         <input
+          // ref={titleInput}
           type="text"
           id="title"
           onChange={(e) => setTitle(e.target.value)}
           value={title}
         />
-        <label for="amount" className="new-form__amount">
+        <label htmlFor="amount" className="new-form__amount">
           Amount
         </label>
         <input
@@ -90,7 +93,7 @@ const ExpenseForm = (props) => {
           onChange={(e) => setAmount(e.target.value)}
           value={amount}
         />
-        <label for="date" className="new-form__date">
+        <label htmlFor="date" className="new-form__date">
           Date
         </label>
         <input
