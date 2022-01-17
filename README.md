@@ -1,3 +1,3 @@
-# Expense-Tracker
+Record your daily expense
 
-Run `yarn install` then `yarn start` to preview the application!
+Link: https://expense-tracker499.netlify.app/
